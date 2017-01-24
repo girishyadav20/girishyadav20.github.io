@@ -1,0 +1,27 @@
+
+.map-container{
+  margin-bottom: 20px;
+}
+
+.marker{
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+#popupBorn{
+  background-image: url('../images/born.png');
+}
+
+#popupGraduate{
+  background-image: url('../images/graduate.png');
+}
+
+#popupPG{
+  background-image: url('../images/postgraduate.png');
+}
+
+.job{
+  background-image: url('../images/job.png');
+}

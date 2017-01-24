@@ -4,15 +4,22 @@
 		<meta charset"utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
     	<title>Spatial Workbench</title>
 
     	<!--bootstrap -->
-    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/bootstrap.min.css" rel="stylesheet" />
 		<!--Bootstrap CDN -->
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>-->
-		<link href="css/carousel.css" rel="stylesheet">
+		<link href="css/carousel.css" rel="stylesheet" />
+		<link href="css/map.css" rel="stylesheet" />
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js' ></script>
+		<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8" async></script>
+
+
+
 	</head>
 	<body>
 		<div class="navbar-wrapper">
@@ -30,7 +37,7 @@
               <a class="navbar-brand" href="#"><strong>Girish</strong></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
+              <!-- <ul class="nav navbar-nav">
                  <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Work<span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -40,8 +47,10 @@
                     <li><a href="#">Miscellaneous</a></li>
                   </ul>
                 </li>
-              </ul>
+              </ul> -->
               <ul class="nav navbar-nav navbar-right">
+								<li><a href="#divider-skills">Skills</a></li>
+								<li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
@@ -68,8 +77,8 @@
           <div class="container">
             <div class="carousel-caption">
               <img class="img-rounded" src="images/Work_In_Progress.png" height="100" width="100">
-              <h1>Web App Builder for ArcGIS</h1>
-              <p>Web app developed using ArcGIS Web App Builder. It contains configurable widgets developed.</p>
+              <h1>GeoAnalytics</h1>
+              <p>Geospatial data analysis and processing using ArcGIS tools, ArcPy and Open Source Python and JS libraries i.e. pySAL &amp Turf.js.</p>
               <p><a class="btn btn-lg btn-primary" href="#wabFeature" role="button">Explore</a></p>
             </div>
           </div>
@@ -79,9 +88,9 @@
           <div class="container">
             <div class="carousel-caption">
               <img class="img-rounded" src="images/Work_In_Progress.png" height="100" width="100">
-              <h1>My GIS</h1>
-              <p>A simple map viewer based upon ArcGIS Javascript API. Features custom tools developed by me.</p>
-              <p><a class="btn btn-lg btn-primary" href="#jsFeature" role="button">Learn more</a></p>
+              <h1>Web Development</h1>
+              <p>Building geospatial web apps using ArcGIS API for Javascript, Leaflet, Google Maps API &amp Mapbox.</p>
+              <p><a class="btn btn-lg btn-primary" href="#jsFeature" role="button">View Projects</a></p>
             </div>
           </div>
         </div>
@@ -90,8 +99,8 @@
           <div class="container">
             <div class="carousel-caption">
               <img class="img-rounded" src="images/Work_In_Progress.png" height="100" width="100">
-              <h1>GeoViewer</h1>
-              <p>Leaflet based GIS viewer contains some cool tools.</p>
+              <h1>Server &amp Cloud</h1>
+              <p>GIS webservices and RESTful APIs using ArcGIS Platform, Node.js and Python.</p>
               <p><a class="btn btn-lg btn-primary" href="#leafFeature" role="button">Explore</a></p>
             </div>
           </div>
@@ -108,83 +117,132 @@
     </div><!-- /.carousel -->
 
 
-    <!-- Marketing messaging and featurettes
+    <!-- Motivation, skills, projects and about me
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row" id="projects">
+			<!-- motivation writeup -->
+			<div class="row">
+				<p>Motivation writeup goes here...</p>
+			</div>
+
+			<hr id="divider-skills" class="featurette-divider">
+
+      <!-- Skills section -->
+      <div class="row" id="skills">
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Web App Builder for ArcGIS</h2>
-          <p>Custom widgets for ArcGIS WAB.</p>
-          <p><a class="btn btn-default" href="#wabFeature" role="button">View details &raquo;</a></p>
+          <h2>GeoAnalytics</h2>
+          <p>Writeup for geospatial skills...</p>
+          <p><a class="btn btn-default" href="#wabFeature" role="button">View Projects &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>ArcGIS for Javascript</h2>
-          <p>My work related to ArcGIS for Javascript API.</p>
-          <p><a class="btn btn-default" href="#jsFeature" role="button">View details &raquo;</a></p>
+          <h2>Web Development</h2>
+          <p>Web development writeup...</p>
+          <p><a class="btn btn-default" href="#jsFeature" role="button">View Projects &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Leaflet</h2>
-          <p>A GIS Map Viewer developed using leaflet.</p>
-          <p><a class="btn btn-default" href="#leafFeature" role="button">View details &raquo;</a></p>
+          <h2>Server &amp Cloud</h2>
+          <p>server and cloud writeup goes here...</p>
+          <p><a class="btn btn-default" href="#leafFeature" role="button">View Details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
+				<p><a href="#myCarousel">Back to top</a></p>
       </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
+      <!-- START THE Projects -->
 
-      <hr class="featurette-divider">
+      <hr id="divider-projects" class="featurette-divider">
 
-      <div class="row featurette" id="wabFeature">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Widgets for ArcGIS WAB</h2>
-          <p class="lead">Configurable custom widgets for ArcGIS Web App Builder.</p>
+      <div class="row featurette" id="projects">
+        <div class="col-md-5">
+          <h2 class="">Project Planning System</h2>
+          <p class="lead">A configurable and themeable web application built using Web AppBuilder for ArcGIS framework.</p>
           <ul class="list-group">
-            <li class="list-group-item">Query Builder Widget</li>
-            <li class="list-group-item">Custom Editor Widget</li>
+            <li class="list-group-item">ArcGIS Online/Portal for ArcGIS</li>
+            <li class="list-group-item">ArcGIS API for Javascript and ArcPy</li>
+						<li class="list-group-item">Dojo Toolkit</li>
+						<li class="list-group-item">ArcGIS Server Object Extentsion (SOE) and RESTful API</li>
           </ul>
           <p><a href="#myCarousel">Back to top</a></p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/Work_In_Progress.png" alt="Generic placeholder image">
+        <div class="col-md-7">
+					<video src="videos/CreateProject.webm" height="auto" width="100%" controls autoplay loop muted poster="posterimage.jpg"></video>
+          <!-- <img class="featurette-image img-responsive center-block" src="images/Work_In_Progress.png" alt="Generic placeholder image"> -->
         </div>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="row featurette" id="jsFeature">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">ArcGIS API for Javascript</h2>
-          <p class="lead">A simple GIS web app containes custom functionalities and widgets developed using dojo and ArcGIS API for Javascript.</p>
+        <div class="col-md-5 col-md-push-7">
+          <h2 class="">Google Street View Widget</h2>
+          <p class="lead">A custom widget to show Google Street View on ArcGIS web apps.</p>
+					<ul class="list-group">
+            <li class="list-group-item">Google Maps Javascript API</li>
+            <li class="list-group-item">Web AppBuilder for ArcGIS framework</li>
+						<li class="list-group-item">Dojo Dijits</li>
+          </ul>
           <p><a href="#myCarousel">Back to top</a></p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="images/Work_In_Progress.png" alt="Generic placeholder image">
+        <div class="col-md-7 col-md-pull-5">
+					<video src="videos/StreetView.webm" height="auto" width="100%" controls autoplay loop muted poster="posterimage.jpg"></video>
         </div>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="row featurette" id="leafFeature">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Leaflet Projects</h2>
-          <p class="lead">Custom widgets for Mapping and GIS analysis developed using Leaflet and ESRI Leaflet library.</p>
+        <div class="col-md-5">
+          <h2 class="">Data Query Widget</h2>
+          <p class="lead">A custom Web AppBuilder for ArcGIS widget to execute complex attribute queries on map layers.</p>
           <p><a href="#myCarousel">Back to top</a></p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="images/Work_In_Progress.png" alt="Generic placeholder image">
+        <div class="col-md-7">
+					<video src="videos/QueryWidget.webm" height="auto" width="100%" controls autoplay loop muted poster="posterimage.jpg"></video>
+          <!-- <img class="featurette-image img-responsive center-block" src="images/Work_In_Progress.png" alt="Generic placeholder image"> -->
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr id="divider-map" class="featurette-divider">
 
-      <!-- /END THE FEATURETTES -->
+      <!-- /END THE projects -->
+
+			<!-- Start of About -->
+			<!-- My journey map -->
+
+			<div class="row">
+				<h2 class="">Spatial Resume - My Professional &amp Academic Journey</h2>
+				<p class="lead">Map that will take you to my journey so far and illustrate my professional &amp academic career.</p>
+				<div class="map-container">
+        	<div id='map'></div>
+				</div>
+				<ul class="list-group">
+					<li class="list-group-item">Object Oriented Javascript (ES2015)</li>
+					<li class="list-group-item">Leaflet and MapBox GL JS</li>
+					<li class="list-group-item">Bootstrap</li>
+				</ul>
+			</div>
+
+			<!-- Other resume items -->
+			<hr class="featurette-divider">
+
+			<div class="row">
+				<div class="">
+					List of resume items. and links to documents
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<!-- Contacts -->
+			<div class="row contacts">
+				<p>Contact information goes here...</p>
+			</div>
 
 
       <!-- FOOTER -->
@@ -199,5 +257,7 @@
 		<script src="js/jquery.min.js"></script>
 
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/journeyControl.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
