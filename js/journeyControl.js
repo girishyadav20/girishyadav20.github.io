@@ -66,7 +66,7 @@ JourneyControl.prototype.beginJourney = function () {
   .then(() => !this.abort && this.goto(this._map.locations.jobRmsi, 15))
   .then(() => !this.abort && this.goto(this._map.locations.jobNiit, 15))
   .then(() => !this.abort && this.fly(this._map.locations.jobNiit.getLngLat().toArray(),
-                       this._map.locations.jobFC.getLngLat().toArray(), 1.5, [0,51]))
+                       this._map.locations.jobFC.getLngLat().toArray(), 1.5, [0,51], 270))
   .then(() => !this.abort && this.goto(this._map.locations.jobFC))
   .then(() => !this.abort && this.fly(this._map.locations.jobFC.getLngLat().toArray(),
                        this._map.locations.jobEsri.getLngLat().toArray(), 5))
@@ -108,7 +108,7 @@ JourneyControl.prototype.goto = function (locMarker, zoom = 13) {
   return p;
 };
 
-JourneyControl.prototype.fly = function (origin, destination, zoom, waypoint) {
+JourneyControl.prototype.fly = function (origin, destination, zoom, waypoint, bearing) {
   return new Promise((resolve, reject) => {
     var flightPath = [];
     flightPath.push(origin);
@@ -154,7 +154,9 @@ JourneyControl.prototype.fly = function (origin, destination, zoom, waypoint) {
     };
     // Calculate the distance between origin and dest
     var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
-    var bearing = turf.bearing(originPoint, destPoint);
+    if (!bearing){
+      bearing = turf.bearing(originPoint, destPoint);
+    }
     var midpoint = turf.midpoint(originPoint, destPoint);
     this._map.flyTo({
       center: midpoint.geometry.coordinates,
