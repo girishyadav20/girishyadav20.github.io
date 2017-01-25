@@ -60,6 +60,26 @@ body {
   height: 500px;
 }
 
+/* Skills CONTENT
+-------------------------------------------------- */
+.skills-icon {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.skills-ga {
+  background: #2196F3;
+}
+.skills-web {
+  background: #FFC107;
+}
+.skills-cloud {
+  background: #c52062;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
