@@ -1,6 +1,6 @@
 
 (function(){
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lyaXNoeWFkYXYyMCIsImEiOiJjaXgwMzdtdmEwMXF4MnpxY3d5bzF3a21tIn0.ZzV0PBfMtGT_kjV0AffDIw';
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejh2N21nMzAxMmQzMnA5emRyN2lucW0ifQ.jSE-g2vsn48Ry928pqylcg';
 
   var mapCenter = [-10,25];
   var ghar = [79.958925, 23.169810];
